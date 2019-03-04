@@ -3,66 +3,66 @@ const Schema = mongoose.Schema
 
 let User = new Schema({
   first_name: {
-    type: String
+    type: String, required: true, trim: true, default: null
   },
   last_name: {
-    type: String
+    type: String, required: true, trim: true, default: null
   },
   username: {
-    type: String
+    type: String, required: true, trim: true, default: null
   },
   password: {
-    type: String
+    type: String, required: true, trim: true, default: null
   },
   email: {
-    type: String
+    type: String, required: true, trim: true, default: null
   },
   age: {
-    type: Integer
+    type: Number, required: true, trim: true, default: null
   },
   credit_card_id: {
-    type: Number
+    type: Number, required: true, trim: true, default: null
   },
   scores:{
     math:{
       latest: {
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       },
       last:{
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       },
       average:{
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       }
     },
     words:{
       latest: {
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       },
       last:{
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       },
       average:{
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       }
     },
     infant:{
       latest: {
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       },
       last:{
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       },
       average:{
-        type: Number
+        type: Number, required: true, trim: true, default: 0
       }
     }
   },
   plan_id:{
-    type: Number
+    type: Number, required: true, trim: true, default: null
   },
   disable_instructions:{
-    type: Boolean
+    type: Boolean, required: true, default: null
   }
 })
 

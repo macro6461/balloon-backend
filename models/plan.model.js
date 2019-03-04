@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
-const Scehma = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 let Plan = new Schema({
   plan_name:{
-    type: String
+    type: String, required: true, trim: true
   },
   access:{
-    type: Number //from 1 to 3
+    type: Number, required: true, trim: true, default: 1 //from 1 to 3
   },
 })
 

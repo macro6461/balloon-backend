@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Scehma = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 let CreditCard = new Schema({
   user_id:{
